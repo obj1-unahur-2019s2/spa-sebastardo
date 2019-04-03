@@ -18,7 +18,7 @@ Tenemos que poder consultar `olivia.gradoDeConcentracion()`.
 
 ### Bruno
 De Bruno nos interesan tres cosas: si es feliz o no (digamos que "nace" feliz), si tiene sed (al principio no), y su peso (que arranca en 55 kilos, o sea 55000 gramos). Los eventos que nos interesan son estos:
-- _recibir masajes_ es suficiente para que Bruno sea feliz.
+- cuando _recibe masajes_, se pone feliz.
 - cuando _se da un baño de vapor_, baja de peso 500 gramos y le da sed.
 - cuando _toma agua_ se le va la sed.
 - cuando _come fideos_ aumenta de peso 250 gramos, y le da sed.
