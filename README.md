@@ -1,4 +1,7 @@
 # Spa
+ 
+[![Build Status](https://travis-ci.org/wollok/spa.svg?branch=master)](https://travis-ci.org/wollok/spa)
+
 
 Se trata de estudiar el efecto que produce en distintas personas visitar un spa. Vamos por partes.
 
