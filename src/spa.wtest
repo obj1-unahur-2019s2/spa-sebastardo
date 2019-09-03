@@ -1,0 +1,10 @@
+import personas.*
+import spa.*
+
+// auto-generated at 03/09/2019 00:15:43
+test "exported test from REPL session" {
+	
+	ramiro.contractura()
+	assert.equals(true, bruno.estaPerfecto())
+	assert.equals(6, olivia.gradoDeConcentracion())
+}
