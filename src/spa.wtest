@@ -1,43 +1,26 @@
 import personas.*
 import spa.*
 
-// auto-generated at 03/09/2019 00:15:43
-test "exported test from REPL session" {
-	
-	ramiro.contractura()
-	assert.equals(true, bruno.estaPerfecto())
-	assert.equals(6, olivia.gradoDeConcentracion())
-}
-
-
-
-test "ramiro baño Vapor" {
-	ramiro.darseUnBanioDeVapor()
-	assert.equals(false,ramiro.grasaPiel())
-
-}
-
-test"Bruno ve el noticiero y ya no esta feliz "{
-	bruno.verElNoticiero()
-	assert.notThat(bruno.esFeliz())
-	
-}
-
-test " Ramiro va al spa y su piel ya no es grasa"{
+test "ramiro recibe premio"{
 	spa.atender(ramiro)
-	assert.equals(false,ramiro.grasaPiel())
-}
-test "olivia va al spa y su grado de concentracion aumenta"{
-	spa.atender(olivia)
-	assert.equals(12,olivia.gradoDeConcentracion())
-}
-test "Bruno va al spa y aparte se da otro baño de vapor y su peso disminuye mas"{
-	spa.atender(bruno)
-	bruno.darseUnBanioDeVapor()
-	assert.equals(54000,bruno.peso())
+	assert.that(spa.premio(ramiro))
 }
 
-test "Bruno esta un medio dia en casa y mira el noticiero, bruno ya no esta feliz "{
-	bruno.mediodiaEnCasa()
-	assert.equals(false,bruno.esFeliz())
+test "despues de discutir, el spa concentra a olivia"{
+	olivia.discute()
+	spa.atender(olivia)
+	assert.equals(8,olivia.gradoDeConcentracion())
+}
+
+test "el spa adelgaza a bruno pero no esta perfecto"{
+	spa.atender(bruno)
+	assert.notThat(bruno.estaPerfecto())
+	assert.equals(54500, bruno.peso())
+}
+
+test "despues del trabajo, el spa relaja a ramiro"{
+	ramiro.diaDeTrabajo()
+	spa.atender(ramiro)
+	assert.equals(0,ramiro.contractura())
+	assert.notThat(ramiro.pielGrasosa())
 }
