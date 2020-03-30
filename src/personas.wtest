@@ -1,0 +1,45 @@
+import personas.*
+
+test "Olivia discute" {
+
+	olivia.discute()
+	assert.equals(5, olivia.gradoDeConcentracion())
+}
+
+test "Olivia se concentra (un poco)" {
+
+	olivia.discute()
+	olivia.discute()
+	olivia.discute()
+	olivia.discute()
+	olivia.darseUnBanioDeVapor()
+	assert.equals(2, olivia.gradoDeConcentracion())
+	olivia.recibirMasajes()
+	assert.equals(5, olivia.gradoDeConcentracion())	
+}
+
+
+test "No hay perfeccion en Bruno"{
+	bruno.darseUnBanioDeVapor()
+	assert.notThat(bruno.estaPerfecto())
+}
+
+
+test "Ramiro trabajo grasoso"{
+	ramiro.diaDeTrabajo()
+	assert.that(ramiro.pielGrasosa())
+}
+
+test "Ramiro y el relax despued de un dia ocupado"{
+	ramiro.bajarALaFosa()
+	ramiro.jugarAlPaddle()
+	ramiro.bajarALaFosa()
+	ramiro.darseUnBanioDeVapor()
+	assert.notThat(ramiro.pielGrasosa())
+	assert.equals(5,ramiro.contractura())
+	ramiro.recibirMasajes()
+	ramiro.recibirMasajes()
+	assert.equals(1,ramiro.contractura())
+	ramiro.recibirMasajes()
+	assert.equals(0,ramiro.contractura())
+}

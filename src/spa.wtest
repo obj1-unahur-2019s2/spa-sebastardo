@@ -1,0 +1,26 @@
+import personas.*
+import spa.*
+
+test "ramiro recibe premio"{
+	spa.atender(ramiro)
+	assert.that(spa.premio(ramiro))
+}
+
+test "despues de discutir, el spa concentra a olivia"{
+	olivia.discute()
+	spa.atender(olivia)
+	assert.equals(8,olivia.gradoDeConcentracion())
+}
+
+test "el spa adelgaza a bruno pero no esta perfecto"{
+	spa.atender(bruno)
+	assert.notThat(bruno.estaPerfecto())
+	assert.equals(54500, bruno.peso())
+}
+
+test "despues del trabajo, el spa relaja a ramiro"{
+	ramiro.diaDeTrabajo()
+	spa.atender(ramiro)
+	assert.equals(0,ramiro.contractura())
+	assert.notThat(ramiro.pielGrasosa())
+}
